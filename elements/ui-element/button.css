@@ -329,119 +329,119 @@
 
 /* Facebook */
 
-.ui.facebook.button {
+:host(.facebook) {
   background-color: #3B579D;
   color: #FFFFFF;
 }
 
-.ui.facebook.button:hover {
+:host(.facebook):hover {
   background-color: #3A59A9;
   color: #FFFFFF;
 }
 
-.ui.facebook.button:active {
+:host(.facebook):active {
   background-color: #334F95;
   color: #FFFFFF;
 }
 
 /* Twitter */
 
-.ui.twitter.button {
+:host(.twitter) {
   background-color: #4092CC;
   color: #FFFFFF;
 }
 
-.ui.twitter.button:hover {
+:host(.twitter):hover {
   background-color: #399ADE;
   color: #FFFFFF;
 }
 
-.ui.twitter.button:active {
+:host(.twitter):active {
   background-color: #3283BC;
   color: #FFFFFF;
 }
 
 /* Google Plus */
 
-.ui.google.plus.button {
+:host(.google.plus) {
   background-color: #D34836;
   color: #FFFFFF;
 }
 
-.ui.google.plus.button:hover {
+:host(.google.plus):hover {
   background-color: #E3432E;
   color: #FFFFFF;
 }
 
-.ui.google.plus.button:active {
+:host(.google.plus):active {
   background-color: #CA3A27;
   color: #FFFFFF;
 }
 
 /* Linked In */
 
-.ui.linkedin.button {
+:host(.linkedin) {
   background-color: #1F88BE;
   color: #FFFFFF;
 }
 
-.ui.linkedin.button:hover {
+:host(.linkedin):hover {
   background-color: #1394D6;
   color: #FFFFFF;
 }
 
-.ui.linkedin.button:active {
+:host(.linkedin):active {
   background-color: #1179AE;
   color: #FFFFFF;
 }
 
 /* YouTube */
 
-.ui.youtube.button {
+:host(.youtube) {
   background-color: #CC181E;
   color: #FFFFFF;
 }
 
-.ui.youtube.button:hover {
+:host(.youtube):hover {
   background-color: #DF0209;
   color: #FFFFFF;
 }
 
-.ui.youtube.button:active {
+:host(.youtube):active {
   background-color: #A50006;
   color: #FFFFFF;
 }
 
 /* Instagram */
 
-.ui.instagram.button {
+:host(.instagram) {
   background-color: #49769C;
   color: #FFFFFF;
 }
 
-.ui.instagram.button:hover {
+:host(.instagram):hover {
   background-color: #4781B1;
   color: #FFFFFF;
 }
 
-.ui.instagram.button:active {
+:host(.instagram):active {
   background-color: #38658A;
   color: #FFFFFF;
 }
 
 /* Pinterest */
 
-.ui.pinterest.button {
+:host(.pinterest) {
   background-color: #00ACED;
   color: #FFFFFF;
 }
 
-.ui.pinterest.button:hover {
+:host(.pinterest):hover {
   background-color: #00B9FF;
   color: #FFFFFF;
 }
 
-.ui.pinterest.button:active {
+:host(.pinterest):active {
   background-color: #009EDA;
   color: #FFFFFF;
 }
@@ -450,7 +450,7 @@
      Icon
 ---------------*/
 
-.ui.button > .icon {
+.ui.button > .icon { /* TODO */
   margin-right: 0.6em;
   line-height: 1;
   -webkit-transition: opacity 0.1s ease;
@@ -466,13 +466,13 @@
 --------------------*/
 
 .ui.left.floated.buttons,
-.ui.left.floated.button {
+:host(.left.floated) {
   float: left;
   margin-right: 0.25em;
 }
 
 .ui.right.floated.buttons,
-.ui.right.floated.button {
+:host(.right.floated) {
   float: right;
   margin-left: 0.25em;
 }
@@ -482,18 +482,18 @@
 --------------------*/
 
 .ui.buttons .button,
-.ui.button {
+:host {
   font-size: 1rem;
 }
 
 .ui.mini.buttons .button,
 .ui.mini.buttons .or,
-.ui.mini.button {
+:host(.mini) {
   font-size: 0.8rem;
 }
 
 .ui.mini.buttons .button,
-.ui.mini.button {
+:host(.mini) {
   padding: 0.6em 0.8em;
 }
 
