@@ -504,13 +504,13 @@
 
 .ui.tiny.buttons .button,
 .ui.tiny.buttons .or,
-.ui.tiny.button {
+:host(.tiny) {
   font-size: 0.875em;
 }
 
 .ui.tiny.buttons .button,
 .ui.tiny.buttons .button,
-.ui.tiny.button {
+:host(.tiny) {
   padding: 0.6em 0.8em;
 }
 
@@ -521,31 +521,31 @@
 
 .ui.small.buttons .button,
 .ui.small.buttons .or,
-.ui.small.button {
+:host(.small) {
   font-size: 0.875rem;
 }
 
 .ui.large.buttons .button,
 .ui.large.buttons .or,
-.ui.large.button {
+:host(.large) {
   font-size: 1.125rem;
 }
 
 .ui.big.buttons .button,
 .ui.big.buttons .or,
-.ui.big.button {
+:host(.big) {
   font-size: 1.25rem;
 }
 
 .ui.huge.buttons .button,
 .ui.huge.buttons .or,
-.ui.huge.button {
+:host(.huge) {
   font-size: 1.375rem;
 }
 
 .ui.massive.buttons .button,
 .ui.massive.buttons .or,
-.ui.massive.button {
+:host(.massive) {
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -568,31 +568,20 @@
 
 /* loading */
 
-.ui.huge.loading.button:after {
-  background-image: url(../images/loader-small.gif);
-}
-
-.ui.massive.buttons .loading.button:after,
-.ui.gigantic.buttons .loading.button:after,
-.ui.massive.loading.button:after,
-.ui.gigantic.loading.button:after {
-  background-image: url(../images/loader-medium.gif);
-}
-
 .ui.huge.loading.button:after,
 .ui.huge.loading.button.active:after {
-  background-image: url(../images/loader-small.gif);
+  background-image: url(../../images/loader-small.gif);
 }
 
 .ui.massive.buttons .loading.button:after,
 .ui.gigantic.buttons .loading.button:after,
-.ui.massive.loading.button:after,
-.ui.gigantic.loading.button:after,
+:host(.massive[loading]):after,
+:host(.gigantic[loading]):after,
 .ui.massive.buttons .loading.button.active:after,
 .ui.gigantic.buttons .loading.button.active:after,
-.ui.massive.loading.button.active:after,
-.ui.gigantic.loading.button.active:after {
-  background-image: url(../images/loader-medium.gif);
+:host(.massive[loading][active]):after,
+:host(.gigantic[loading][active]):after {
+  background-image: url(../../images/loader-medium.gif);
 }
 
 /*--------------
@@ -616,7 +605,7 @@
 --------------------*/
 
 .ui.basic.buttons .button,
-.ui.basic.button {
+:host(.basic) {
   background-color: transparent !important;
   background-image: none;
   color: #808080 !important;
@@ -633,7 +622,7 @@
 }
 
 .ui.basic.buttons .button:hover,
-.ui.basic.button:hover {
+:host(.basic):hover {
   background-image: none;
   color: #7F7F7F !important;
   -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.18) inset;
@@ -641,7 +630,7 @@
 }
 
 .ui.basic.buttons .button:active,
-.ui.basic.button:active {
+:host(.basic):active {
   background-color: rgba(0, 0, 0, 0.02) !important;
   color: #7F7F7F !important;
   -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1) inset;
@@ -649,7 +638,7 @@
 }
 
 .ui.basic.buttons .button.active,
-.ui.basic.button.active {
+:host(.basic[active]) {
   background-color: rgba(0, 0, 0, 0.05);
   color: #7F7F7F;
   -webkit-box-shadow: 0px 0px 0px 1px #BDBDBD inset;
@@ -657,21 +646,21 @@
 }
 
 .ui.basic.buttons .button.active:hover,
-.ui.basic.button.active:hover {
+:host(.basic[active]):hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
 /* Inverted */
 
 .ui.basic.inverted.buttons .button,
-.ui.basic.inverted.button {
+:host(.basic.inverted) {
   color: #FAFAFA !important;
   -webkit-box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.3) inset;
   box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.3) inset;
 }
 
 .ui.basic.inverted.buttons .button:hover,
-.ui.basic.inverted.button:hover {
+:host(.basic.inverted):hover {
   background-image: none;
   color: #FFFFFF !important;
   -webkit-box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.5) inset;
@@ -679,7 +668,7 @@
 }
 
 .ui.basic.inverted.buttons .button:active,
-.ui.basic.inverted.button:active {
+:host(.basic.inverted):active {
   background-color: rgba(255, 255, 255, 0.05) !important;
   color: #FFFFFF !important;
   -webkit-box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.8) inset !important;
@@ -687,7 +676,7 @@
 }
 
 .ui.basic.inverted.buttons .button.active,
-.ui.basic.inverted.button.active {
+:host(.basic.inverted[active]) {
   background-color: rgba(255, 255, 255, 0.5);
   color: #FFFFFF;
   -webkit-box-shadow: none;
@@ -695,7 +684,7 @@
 }
 
 .ui.basic.inverted.buttons .button.active:hover,
-.ui.basic.inverted.button.active:hover {
+:host(.basic.inverted[active]):hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -801,14 +790,14 @@
 
 .ui.toggle.buttons .active.button,
 .ui.buttons .button.toggle.active,
-.ui.button.toggle.active {
+:host([toggle][active]) { /* TODO: Needs JavaScript */
   background-color: #5BBD72 !important;
   color: #FFFFFF !important;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
 }
 
-.ui.button.toggle.active:hover {
+:host([toggle][active]):hover {
   background-color: #58CB73 !important;
   color: #FFFFFF !important;
   -webkit-box-shadow: none !important;
@@ -819,7 +808,7 @@
     Circular
 ---------------*/
 
-.ui.circular.button {
+:host(.circular) {
   border-radius: 10em;
 }
 
@@ -827,21 +816,21 @@
      Attached
 ---------------*/
 
-.ui.attached.button {
+:host(.attached) {
   display: block;
   -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1) !important;
   box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1) !important;
 }
 
-.ui.attached.top.button {
+:host(.attached.top) {
   border-radius: 0.25em 0.25em 0em 0em;
 }
 
-.ui.attached.bottom.button {
+:host(.attached.bottom) {
   border-radius: 0em 0em 0.25em 0.25em;
 }
 
-.ui.attached.left.button {
+:host(.attached.left) {
   display: inline-block;
   border-left: none;
   padding-right: 0.75em;
@@ -849,7 +838,7 @@
   border-radius: 0.25em 0em 0em 0.25em;
 }
 
-.ui.attached.right.button {
+:host(.attached.right) {
   display: inline-block;
   padding-left: 0.75em;
   text-align: left;
@@ -1121,19 +1110,19 @@
 /*--- Black ---*/
 
 .ui.black.buttons .button,
-.ui.black.button {
+:host(.black) {
   background-color: #5C6166;
   color: #FFFFFF;
 }
 
 .ui.black.buttons .button:hover,
-.ui.black.button:hover {
+:host(.black):hover {
   background-color: #4C4C4C;
   color: #FFFFFF;
 }
 
 .ui.black.buttons .button:active,
-.ui.black.button:active {
+:host(.black):active { /* TODO: no active state */
   background-color: #333333;
   color: #FFFFFF;
 }
@@ -1141,21 +1130,21 @@
 /*--- Green ---*/
 
 .ui.green.buttons .button,
-.ui.green.button {
+:host(.green) {
   background-color: #5BBD72;
   color: #FFFFFF;
 }
 
 .ui.green.buttons .button:hover,
-.ui.green.button:hover,
+:host(.green):hover,
 .ui.green.buttons .active.button,
-.ui.green.button.active {
+:host(.green[active]) {
   background-color: #58cb73;
   color: #FFFFFF;
 }
 
 .ui.green.buttons .button:active,
-.ui.green.button:active {
+:host(.green):active {
   background-color: #4CB164;
   color: #FFFFFF;
 }
@@ -1163,21 +1152,21 @@
 /*--- Red ---*/
 
 .ui.red.buttons .button,
-.ui.red.button {
+:host(.red) {
   background-color: #D95C5C;
   color: #FFFFFF;
 }
 
 .ui.red.buttons .button:hover,
-.ui.red.button:hover,
+:host(.red):hover,
 .ui.red.buttons .active.button,
-.ui.red.button.active {
+:host(.red[active]) {
   background-color: #E75859;
   color: #FFFFFF;
 }
 
 .ui.red.buttons .button:active,
-.ui.red.button:active {
+:host(.red):active {
   background-color: #D24B4C;
   color: #FFFFFF;
 }
@@ -1185,21 +1174,21 @@
 /*--- Orange ---*/
 
 .ui.orange.buttons .button,
-.ui.orange.button {
+:host(.orange) {
   background-color: #E96633;
   color: #FFFFFF;
 }
 
 .ui.orange.buttons .button:hover,
-.ui.orange.button:hover,
+:host(.orange):hover,
 .ui.orange.buttons .active.button,
-.ui.orange.button.active {
+:host(.orange[active]) {
   background-color: #FF7038;
   color: #FFFFFF;
 }
 
 .ui.orange.buttons .button:active,
-.ui.orange.button:active {
+:host(.orange):active {
   background-color: #DA683B;
   color: #FFFFFF;
 }
@@ -1207,21 +1196,21 @@
 /*--- Blue ---*/
 
 .ui.blue.buttons .button,
-.ui.blue.button {
+:host(.blue) {
   background-color: #6ECFF5;
   color: #FFFFFF;
 }
 
 .ui.blue.buttons .button:hover,
-.ui.blue.button:hover,
+:host(.blue):hover,
 .ui.blue.buttons .active.button,
-.ui.blue.button.active {
+:host(.blue[active]) {
   background-color: #1AB8F3;
   color: #FFFFFF;
 }
 
 .ui.blue.buttons .button:active,
-.ui.blue.button:active {
+:host(.blue):active {
   background-color: #0AA5DF;
   color: #FFFFFF;
 }
@@ -1229,21 +1218,21 @@
 /*--- Purple ---*/
 
 .ui.purple.buttons .button,
-.ui.purple.button {
+:host(.purple) {
   background-color: #564F8A;
   color: #FFFFFF;
 }
 
 .ui.purple.buttons .button:hover,
-.ui.purple.button:hover,
+:host(.purple):hover,
 .ui.purple.buttons .active.button,
-.ui.purple.button.active {
+:host(.purple[active]) {
   background-color: #3E3773;
   color: #FFFFFF;
 }
 
 .ui.purple.buttons .button:active,
-.ui.purple.button:active {
+:host(.purple):active {
   background-color: #2E2860;
   color: #FFFFFF;
 }
@@ -1251,21 +1240,21 @@
 /*--- Teal ---*/
 
 .ui.teal.buttons .button,
-.ui.teal.button {
+:host(.teal) {
   background-color: #00B5AD;
   color: #FFFFFF;
 }
 
 .ui.teal.buttons .button:hover,
-.ui.teal.button:hover,
+:host(.teal):hover,
 .ui.teal.buttons .active.button,
-.ui.teal.button.active {
+:host(.teal[active]) {
   background-color: #009A93;
   color: #FFFFFF;
 }
 
 .ui.teal.buttons .button:active,
-.ui.teal.button:active {
+:host(.teal):active {
   background-color: #00847E;
   color: #FFFFFF;
 }
@@ -1275,21 +1264,21 @@
 ----------------*/
 
 .ui.positive.buttons .button,
-.ui.positive.button {
+:host(.positive) {
   background-color: #5BBD72 !important;
   color: #FFFFFF;
 }
 
 .ui.positive.buttons .button:hover,
-.ui.positive.button:hover,
+:host(.positive):hover,
 .ui.positive.buttons .active.button,
-.ui.positive.button.active {
+:host(.positive[active]) {
   background-color: #58CB73 !important;
   color: #FFFFFF;
 }
 
 .ui.positive.buttons .button:active,
-.ui.positive.button:active {
+:host(.positive):active {
   background-color: #4CB164 !important;
   color: #FFFFFF;
 }
@@ -1299,21 +1288,21 @@
 ----------------*/
 
 .ui.negative.buttons .button,
-.ui.negative.button {
+:host(.negative) {
   background-color: #D95C5C !important;
   color: #FFFFFF;
 }
 
 .ui.negative.buttons .button:hover,
-.ui.negative.button:hover,
+:host(.negative):hover,
 .ui.negative.buttons .active.button,
-.ui.negative.button.active {
+:host(.negative[active]) {
   background-color: #E75859 !important;
   color: #FFFFFF;
 }
 
 .ui.negative.buttons .button:active,
-.ui.negative.button:active {
+:host(.negative):active {
   background-color: #D24B4C !important;
   color: #FFFFFF;
 }

@@ -6,4 +6,5 @@ body {
 
 .example {
   padding: 10px;
+  overflow: hidden;
 }
