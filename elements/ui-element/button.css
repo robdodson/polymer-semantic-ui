@@ -61,7 +61,7 @@
 ---------------*/
 
 .ui.buttons .active.button,
-.ui.active.button {
+:host([active]) {
   background-color: #EAEAEA;
   background-image: none;
   -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.05) inset !important;
@@ -73,19 +73,19 @@
       Hover
 ---------------*/
 
-.ui.button:not(.loading):hover {
+:host(:not([loading])):hover { /* causes a bug? */
   background-image: -webkit-gradient(linear, top left, bottom left, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.08)));
   background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.08));
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.08));
   color: rgba(0, 0, 0, 0.7);
 }
 
-.ui.button.active:hover {
+:host([active]):hover {
   background-image: none;
 }
 
-.ui.button:hover .icon,
-.ui.button.hover .icon {
+:host:hover .icon,
+:host.hover .icon {
   opacity: 0.85;
 }
 
@@ -93,8 +93,8 @@
       Down
 ---------------*/
 
-.ui.button:not(.loading):active,
-.ui.active.button:not(.loading):active {
+:host(:not([loading])):active,
+:host([active]:not([loading])):active {
   background-color: #F1F1F1;
   color: rgba(0, 0, 0, 0.7);
   -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.05) inset !important;
@@ -105,7 +105,7 @@
     Loading
 ---------------*/
 
-.ui.loading.button {
+:host([loading]) {
   position: relative;
   cursor: default;
   background-color: #FFFFFF !important;
@@ -114,17 +114,17 @@
   transition: all 0s linear;
 }
 
-.ui.loading.button:after {
+:host([loading]):after {
   position: absolute;
   top: 0em;
   left: 0em;
   width: 100%;
   height: 100%;
   content: '';
-  background: transparent url(../images/loader-mini.gif) no-repeat 50% 50%;
+  background: transparent url(../../images/loader-mini.gif) no-repeat 50% 50%;
 }
 
-.ui.labeled.icon.loading.button .icon {
+.ui.labeled.icon.loading.button .icon { /* TODO */
   background-color: transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -134,9 +134,9 @@
       Disabled
 --------------------*/
 
-.ui.disabled.button,
-.ui.disabled.button:hover,
-.ui.disabled.button.active {
+:host([disabled]),
+:host([disabled]):hover,
+:host([disabled]).active {
   background-color: #DDDDDD !important;
   cursor: default;
   color: rgba(0, 0, 0, 0.5) !important;
@@ -154,7 +154,7 @@
        Animated
 --------------------*/
 
-.ui.animated.button {
+.ui.animated.button {  /* TODO */
   position: relative;
   overflow: hidden;
 }
@@ -280,21 +280,21 @@
 --------------------*/
 
 .ui.primary.buttons .button,
-.ui.primary.button {
+:host(.primary) {
   background-color: #D95C5C;
   color: #FFFFFF;
 }
 
 .ui.primary.buttons .button:hover,
-.ui.primary.button:hover,
+:host(.primary):hover,
 .ui.primary.buttons .active.button,
-.ui.primary.button.active {
+:host(.primary[active]) {
   background-color: #E75859;
   color: #FFFFFF;
 }
 
 .ui.primary.buttons .button:active,
-.ui.primary.button:active {
+:host(.primary):active {
   background-color: #D24B4C;
   color: #FFFFFF;
 }
@@ -304,21 +304,21 @@
 --------------------*/
 
 .ui.secondary.buttons .button,
-.ui.secondary.button {
+:host(.secondary) {
   background-color: #00B5AD;
   color: #FFFFFF;
 }
 
 .ui.secondary.buttons .button:hover,
-.ui.secondary.button:hover,
+:host(.secondary):hover,
 .ui.secondary.buttons .active.button,
-.ui.secondary.button.active {
+:host(.secondary[active]) {
   background-color: #009A93;
   color: #FFFFFF;
 }
 
 .ui.secondary.buttons .button:active,
-.ui.secondary.button:active {
+:host(.secondary):active {
   background-color: #00847E;
   color: #FFFFFF;
 }
