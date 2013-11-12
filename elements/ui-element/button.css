@@ -61,7 +61,7 @@
 ---------------*/
 
 .ui.buttons .active.button,
-:host([active]) {
+:host(.active) {
   background-color: #EAEAEA;
   background-image: none;
   -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.05) inset !important;
@@ -73,19 +73,19 @@
       Hover
 ---------------*/
 
-:host(:not([loading])):hover {
+:host(:not(.loading)):hover {
   background-image: -webkit-gradient(linear, top left, bottom left, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.08)));
   background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.08));
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.08));
   color: rgba(0, 0, 0, 0.7);
 }
 
-:host([active]):hover {
+:host(.active):hover {
   background-image: none;
 }
 
-:host:hover .icon,
-:host.hover .icon {
+:host:hover ui-icon,
+:host(.hover) ui-icon {
   opacity: 0.85;
 }
 
@@ -93,8 +93,8 @@
       Down
 ---------------*/
 
-:host(:not([loading])):active,
-:host([active]:not([loading])):active {
+:host(:not(.loading)):active,
+:host(.active:not(.loading)):active {
   background-color: #F1F1F1;
   color: rgba(0, 0, 0, 0.7);
   -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.05) inset !important;
@@ -105,7 +105,7 @@
     Loading
 ---------------*/
 
-:host([loading]) {
+:host(.loading) {
   position: relative;
   cursor: default;
   background-color: #FFFFFF !important;
@@ -114,7 +114,7 @@
   transition: all 0s linear;
 }
 
-:host([loading]):after {
+:host(.loading):after {
   position: absolute;
   top: 0em;
   left: 0em;
@@ -124,7 +124,7 @@
   background: transparent url(../../images/loader-mini.gif) no-repeat 50% 50%;
 }
 
-.ui.labeled.icon.loading.button .icon { /* TODO */
+:host(.labeled.icon.loading) ui-icon {
   background-color: transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -134,9 +134,9 @@
       Disabled
 --------------------*/
 
-:host([disabled]),
-:host([disabled]):hover,
-:host([disabled]).active {
+:host(.disabled),
+:host(.disabled):hover,
+:host(.disabled.active) {
   background-color: #DDDDDD !important;
   cursor: default;
   color: rgba(0, 0, 0, 0.5) !important;
@@ -288,7 +288,7 @@
 .ui.primary.buttons .button:hover,
 :host(.primary):hover,
 .ui.primary.buttons .active.button,
-:host(.primary[active]) {
+:host(.primary.active) {
   background-color: #E75859;
   color: #FFFFFF;
 }
@@ -312,7 +312,7 @@
 .ui.secondary.buttons .button:hover,
 :host(.secondary):hover,
 .ui.secondary.buttons .active.button,
-:host(.secondary[active]) {
+:host(.secondary.active) {
   background-color: #009A93;
   color: #FFFFFF;
 }
@@ -450,7 +450,7 @@
      Icon
 ---------------*/
 
-.ui.button > .icon { /* TODO */
+:host > ui-icon {
   margin-right: 0.6em;
   line-height: 1;
   -webkit-transition: opacity 0.1s ease;
@@ -575,12 +575,12 @@
 
 .ui.massive.buttons .loading.button:after,
 .ui.gigantic.buttons .loading.button:after,
-:host(.massive[loading]):after,
-:host(.gigantic[loading]):after,
+:host(.massive.loading):after,
+:host(.gigantic.loading):after,
 .ui.massive.buttons .loading.button.active:after,
 .ui.gigantic.buttons .loading.button.active:after,
-:host(.massive[loading][active]):after,
-:host(.gigantic[loading][active]):after {
+:host(.massive.loading.active):after,
+:host(.gigantic.loading.active):after {
   background-image: url(../../images/loader-medium.gif);
 }
 
@@ -589,12 +589,12 @@
 ---------------*/
 
 .ui.icon.buttons .button,
-.ui.icon.button {
+:host(.icon) {
   padding: 0.8em;
 }
 
 .ui.icon.buttons .button > .icon,
-.ui.icon.button > .icon {
+:host(.icon) > ui-icon {
   opacity: 0.9;
   margin: 0em;
   vertical-align: top;
@@ -638,7 +638,7 @@
 }
 
 .ui.basic.buttons .button.active,
-:host(.basic[active]) {
+:host(.basic.active) {
   background-color: rgba(0, 0, 0, 0.05);
   color: #7F7F7F;
   -webkit-box-shadow: 0px 0px 0px 1px #BDBDBD inset;
@@ -646,7 +646,7 @@
 }
 
 .ui.basic.buttons .button.active:hover,
-:host(.basic[active]):hover {
+:host(.basic.active):hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -676,7 +676,7 @@
 }
 
 .ui.basic.inverted.buttons .button.active,
-:host(.basic.inverted[active]) {
+:host(.basic.inverted.active) {
   background-color: rgba(255, 255, 255, 0.5);
   color: #FFFFFF;
   -webkit-box-shadow: none;
@@ -684,7 +684,7 @@
 }
 
 .ui.basic.inverted.buttons .button.active:hover,
-:host(.basic.inverted[active]):hover {
+:host(.basic.inverted.active):hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -713,14 +713,14 @@
 ---------------*/
 
 .ui.labeled.icon.buttons .button,
-.ui.labeled.icon.button {
+:host(.labeled.icon) {
   position: relative;
   padding-left: 4em !important;
   padding-right: 1.4em !important;
 }
 
 .ui.labeled.icon.buttons > .button > .icon,
-.ui.labeled.icon.button > .icon {
+:host(.labeled.icon) > ui-icon {
   position: absolute;
   top: 0em;
   left: 0em;
@@ -763,18 +763,18 @@
   border-bottom-left-radius: 0.25em;
 }
 
-.ui.right.labeled.icon.button {
+:host(.right.labeled.icon) {
   padding-left: 1.4em !important;
   padding-right: 4em !important;
 }
 
-.ui.left.fluid.labeled.icon.button,
-.ui.right.fluid.labeled.icon.button {
+:host(.left.fluid.labeled.icon),
+:host(.right.fluid.labeled.icon) {
   padding-left: 1.4em !important;
   padding-right: 1.4em !important;
 }
 
-.ui.right.labeled.icon.button .icon {
+:host(.right.labeled.icon) ui-icon {
   left: auto;
   right: 0em;
   border-radius: 0em 0.25em 0.25em 0em;
@@ -790,14 +790,14 @@
 
 .ui.toggle.buttons .active.button,
 .ui.buttons .button.toggle.active,
-:host([toggle][active]) { /* TODO: Needs JavaScript */
+:host(.toggle.active) { /* TODO: Needs JavaScript */
   background-color: #5BBD72 !important;
   color: #FFFFFF !important;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
 }
 
-:host([toggle][active]):hover {
+:host(.toggle.active):hover {
   background-color: #58CB73 !important;
   color: #FFFFFF !important;
   -webkit-box-shadow: none !important;
@@ -1138,7 +1138,7 @@
 .ui.green.buttons .button:hover,
 :host(.green):hover,
 .ui.green.buttons .active.button,
-:host(.green[active]) {
+:host(.green.active) {
   background-color: #58cb73;
   color: #FFFFFF;
 }
@@ -1160,7 +1160,7 @@
 .ui.red.buttons .button:hover,
 :host(.red):hover,
 .ui.red.buttons .active.button,
-:host(.red[active]) {
+:host(.red.active) {
   background-color: #E75859;
   color: #FFFFFF;
 }
@@ -1182,7 +1182,7 @@
 .ui.orange.buttons .button:hover,
 :host(.orange):hover,
 .ui.orange.buttons .active.button,
-:host(.orange[active]) {
+:host(.orange.active) {
   background-color: #FF7038;
   color: #FFFFFF;
 }
@@ -1204,7 +1204,7 @@
 .ui.blue.buttons .button:hover,
 :host(.blue):hover,
 .ui.blue.buttons .active.button,
-:host(.blue[active]) {
+:host(.blue.active) {
   background-color: #1AB8F3;
   color: #FFFFFF;
 }
@@ -1226,7 +1226,7 @@
 .ui.purple.buttons .button:hover,
 :host(.purple):hover,
 .ui.purple.buttons .active.button,
-:host(.purple[active]) {
+:host(.purple.active) {
   background-color: #3E3773;
   color: #FFFFFF;
 }
@@ -1248,7 +1248,7 @@
 .ui.teal.buttons .button:hover,
 :host(.teal):hover,
 .ui.teal.buttons .active.button,
-:host(.teal[active]) {
+:host(.teal.active) {
   background-color: #009A93;
   color: #FFFFFF;
 }
@@ -1272,7 +1272,7 @@
 .ui.positive.buttons .button:hover,
 :host(.positive):hover,
 .ui.positive.buttons .active.button,
-:host(.positive[active]) {
+:host(.positive.active) {
   background-color: #58CB73 !important;
   color: #FFFFFF;
 }
@@ -1296,7 +1296,7 @@
 .ui.negative.buttons .button:hover,
 :host(.negative):hover,
 .ui.negative.buttons .active.button,
-:host(.negative[active]) {
+:host(.negative.active) {
   background-color: #E75859 !important;
   color: #FFFFFF;
 }
