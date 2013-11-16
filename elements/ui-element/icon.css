@@ -1612,19 +1612,19 @@
              States
 *******************************/
 
-:host([hover]) {
+:host(.hover) {
   opacity: 1;
 }
 
-:host([active]) {
+:host(.active) {
   opacity: 1;
 }
 
-:host([emphasized]) {
+:host(.emphasized) {
   opacity: 1;
 }
 
-:host([disabled]) {
+:host(.disabled) {
   opacity: 0.3;
 }
 
@@ -1636,14 +1636,14 @@
          Link
 --------------------*/
 
-:host([link]) {
+:host(.link) {
   cursor: pointer;
   opacity: 0.7;
   -webkit-transition: opacity 0.3s ease-out;
   transition: opacity 0.3s ease-out;
 }
 
-:host([link]):hover {
+:host(.link):hover {
   opacity: 1 !important;
 }
 

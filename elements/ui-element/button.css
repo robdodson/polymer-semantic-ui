@@ -154,92 +154,92 @@
        Animated
 --------------------*/
 
-.ui.animated.button {  /* TODO */
+:host(.animated) {
   position: relative;
   overflow: hidden;
 }
 
-.ui.animated.button .visible.content {
+:host(.animated) .visible.content {
   position: relative;
 }
 
-.ui.animated.button .hidden.content {
+:host(.animated) .hidden.content {
   position: absolute;
   width: 100%;
 }
 
 /* Horizontal */
 
-.ui.animated.button .visible.content,
-.ui.animated.button .hidden.content {
+:host(.animated) .visible.content,
+:host(.animated) .hidden.content {
   -webkit-transition: right 0.3s ease 0s;
   transition: right 0.3s ease 0s;
 }
 
-.ui.animated.button .visible.content {
+:host(.animated) .visible.content {
   left: auto;
   right: 0%;
 }
 
-.ui.animated.button .hidden.content {
+:host(.animated) .hidden.content {
   top: 50%;
   left: auto;
   right: -100%;
   margin-top: -0.55em;
 }
 
-.ui.animated.button:hover .visible.content {
+:host(.animated):hover .visible.content {
   left: auto;
   right: 200%;
 }
 
-.ui.animated.button:hover .hidden.content {
+:host(.animated):hover .hidden.content {
   left: auto;
   right: 0%;
 }
 
 /* Vertical */
 
-.ui.vertical.animated.button .visible.content,
-.ui.vertical.animated.button .hidden.content {
+:host(.vertical.animated) .visible.content,
+:host(.vertical.animated) .hidden.content {
   -webkit-transition: top 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
   transition: top 0.3s ease 0s, transform 0.3s ease 0s;
 }
 
-.ui.vertical.animated.button .visible.content {
+:host(.vertical.animated) .visible.content {
   -webkit-transform: translateY(0%);
   -ms-transform: translateY(0%);
   transform: translateY(0%);
   right: auto;
 }
 
-.ui.vertical.animated.button .hidden.content {
+:host(.vertical.animated) .hidden.content {
   top: -100%;
   left: 0%;
   right: auto;
 }
 
-.ui.vertical.animated.button:hover .visible.content {
+:host(.vertical.animated):hover .visible.content {
   -webkit-transform: translateY(200%);
   -ms-transform: translateY(200%);
   transform: translateY(200%);
   right: auto;
 }
 
-.ui.vertical.animated.button:hover .hidden.content {
+:host(.vertical.animated):hover .hidden.content {
   top: 50%;
   right: auto;
 }
 
 /* Fade */
 
-.ui.fade.animated.button .visible.content,
-.ui.fade.animated.button .hidden.content {
+:host(.fade.animated) .visible.content,
+:host(.fade.animated) .hidden.content {
   -webkit-transition: opacity 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
   transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
 }
 
-.ui.fade.animated.button .visible.content {
+:host(.fade.animated) .visible.content {
   left: auto;
   right: auto;
   opacity: 1;
@@ -248,7 +248,7 @@
   transform: scale(1);
 }
 
-.ui.fade.animated.button .hidden.content {
+:host(.fade.animated) .hidden.content {
   opacity: 0;
   left: 0%;
   right: auto;
@@ -257,7 +257,7 @@
   transform: scale(1.2);
 }
 
-.ui.fade.animated.button:hover .visible.content {
+:host(.fade.animated):hover .visible.content {
   left: auto;
   right: auto;
   opacity: 0;
@@ -266,7 +266,7 @@
   transform: scale(0.7);
 }
 
-.ui.fade.animated.button:hover .hidden.content {
+:host(.fade.animated):hover .hidden.content {
   left: 0%;
   right: auto;
   opacity: 1;
@@ -490,10 +490,6 @@
 .ui.mini.buttons .or,
 :host(.mini) {
   font-size: 0.8rem;
-}
-
-.ui.mini.buttons .button,
-:host(.mini) {
   padding: 0.6em 0.8em;
 }
 

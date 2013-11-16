@@ -1,0 +1,858 @@
+/*
+ * # Semantic - Button
+ * http://github.com/jlukic/semantic-ui/
+ *
+ *
+ * Copyright 2013 Contributors
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+/*******************************
+            Buttons
+*******************************/
+
+/*******************************
+             Types
+*******************************/
+
+/*-------------------
+       Primary
+--------------------*/
+
+:host(.primary) ui-button {
+  background-color: #D95C5C;
+  color: #FFFFFF;
+}
+
+:host(.primary) ui-button:hover,
+:host(.primary) ui-button.active {
+  background-color: #E75859;
+  color: #FFFFFF;
+}
+
+:host(.primary) ui-button:active {
+  background-color: #D24B4C;
+  color: #FFFFFF;
+}
+
+/*-------------------
+      Secondary
+--------------------*/
+
+:host(.secondary) ui-button {
+  background-color: #00B5AD;
+  color: #FFFFFF;
+}
+
+:host(.secondary) ui-button:hover,
+:host(.secondary) ui-button.active {
+  background-color: #009A93;
+  color: #FFFFFF;
+}
+
+:host(.secondary) ui-button:active {
+  background-color: #00847E;
+  color: #FFFFFF;
+}
+
+/*******************************
+           Variations
+*******************************/
+
+/*-------------------
+       Floated
+--------------------*/
+
+:host(.left.floated) {
+  float: left;
+  margin-right: 0.25em;
+}
+
+:host(.right.floated) {
+  float: right;
+  margin-left: 0.25em;
+}
+
+/*-------------------
+        Sizes
+--------------------*/
+
+:host(.mini) ui-button,
+:host(.mini) .or {
+  font-size: 0.8rem;
+  padding: 0.6em 0.8em;
+}
+
+:host(.mini.icon) ui-button,
+:host(.mini) .icon {
+  padding: 0.6em 0.6em; /* is this a bug? */
+}
+
+:host(.tiny) ui-button,
+:host(.tiny) .or {
+  font-size: 0.875em;
+  padding: 0.6em 0.8em;
+}
+
+:host(.tiny.icon) ui-button,
+:host(.tiny) .icon {
+  padding: 0.6em 0.6em;
+}
+
+:host(.small) ui-button,
+:host(.small) .or {
+  font-size: 0.875rem;
+}
+
+:host(.large) ui-button,
+:host(.large) .or {
+  font-size: 1.125rem;
+}
+
+:host(.big) ui-button,
+:host(.big) .or {
+  font-size: 1.25rem;
+}
+
+:host(.huge) ui-button,
+:host(.huge) .or {
+  font-size: 1.375rem;
+}
+
+:host(.massive) ui-button,
+:host(.massive) .or {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Or resize */
+
+:host(.tiny) .or:before,
+:host(.mini) .or:before {
+  width: 1.45em;
+  height: 1.55em;
+  line-height: 1.4;
+  margin-left: -0.725em;
+  margin-top: -0.25em;
+}
+
+:host(.tiny) .or:after,
+:host(.massive) .or:after {
+  height: 1.45em;
+}
+
+/* loading */
+
+/*.ui.huge.loading.button:after,
+.ui.huge.loading.button.active:after {
+  background-image: url(../../images/loader-small.gif);
+}
+*/  /* TODO: Does this need a group? */
+
+/*:host(.massive) ui-button.loading:after,
+:host(.gigantic) ui-button.loading:after,
+:host(.massive) ui-button.loading.active:after,
+:host(.gigantic) ui-button.loading.active:after {
+  background-image: url(../../images/loader-medium.gif);
+}*/
+
+/*--------------
+    Icon Only
+---------------*/
+
+:host(.icon) ui-button {
+  padding: 0.8em;
+}
+
+:host(.icon) ui-button > .icon {
+  opacity: 0.9;
+  margin: 0em;
+  vertical-align: top;
+}
+
+/*-------------------
+        Basic
+--------------------*/
+
+:host(.basic) ui-button {
+  background-color: transparent !important;
+  background-image: none;
+  color: #808080 !important;
+  font-weight: normal;
+  text-transform: none;
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1) inset;
+}
+
+:host(.basic) {
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1) inset;
+  border-radius: 0.25em;
+}
+
+:host(.basic) ui-button:hover {
+  background-image: none;
+  color: #7F7F7F !important;
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.18) inset;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.18) inset;
+}
+
+:host(.basic) ui-button:active {
+  background-color: rgba(0, 0, 0, 0.02) !important;
+  color: #7F7F7F !important;
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1) inset;
+}
+
+:host(.basic) ui-button.active {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #7F7F7F;
+  -webkit-box-shadow: 0px 0px 0px 1px #BDBDBD inset;
+  box-shadow: 0px 0px 0px 1px #BDBDBD inset;
+}
+
+:host(.basic) ui-button.active:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Inverted */
+
+:host(.basic.inverted) ui-button {
+  color: #FAFAFA !important;
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.3) inset;
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.3) inset;
+}
+
+:host(.basic.inverted) ui-button:hover {
+  background-image: none;
+  color: #FFFFFF !important;
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.5) inset;
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.5) inset;
+}
+
+:host(.basic.inverted) ui-button:active {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  color: #FFFFFF !important;
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.8) inset !important;
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.8) inset !important;
+}
+
+:host(.basic.inverted) ui-button.active {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #FFFFFF;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+:host(.basic.inverted) ui-button.active:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Basic Group */
+
+:host(.basic) ui-button {
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+:host(.basic) ui-button:hover,
+:host(.basic) ui-button:active {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+:host(.basic) ui-button.active,
+:host(.basic) ui-button.active:hover {
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2) inset;
+}
+
+/* Inverted Group */
+
+:host(.basic.inverted) ui-button {
+  border-left: none;
+}
+
+/*--------------
+   Labeled Icon
+---------------*/
+
+:host(.labeled.icon) ui-button {
+  position: relative;
+  padding-left: 4em !important;
+  padding-right: 1.4em !important;
+}
+
+:host(.labeled.icon) > ui-button > ui-icon {
+  position: absolute;
+  top: 0em;
+  left: 0em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 2.75em;
+  height: 100%;
+  padding-top: 0.8em;
+  background-color: rgba(0, 0, 0, 0.05);
+  text-align: center;
+  border-radius: 0.25em 0px 0px 0.25em;
+  line-height: 1;
+  -webkit-box-shadow: -1px 0px 0px 0px rgba(0, 0, 0, 0.05) inset;
+  box-shadow: -1px 0px 0px 0px rgba(0, 0, 0, 0.05) inset;
+}
+
+:host(.labeled.icon) > ui-button > ui-icon {
+  border-radius: 0em;
+}
+
+:host(.labeled.icon) > ui-button:first-child > ui-icon {
+  border-top-left-radius: 0.25em;
+  border-bottom-left-radius: 0.25em;
+}
+
+:host(.labeled.icon) > ui-button:last-child > ui-icon {
+  border-top-right-radius: 0.25em;
+  border-bottom-right-radius: 0.25em;
+}
+
+:host(.vertical.labeled.icon) > ui-button:first-child > ui-icon {
+  border-radius: 0em;
+  border-top-left-radius: 0.25em;
+}
+
+:host(.vertical.labeled.icon) > ui-button:first-child > ui-icon {
+  border-radius: 0em;
+  border-bottom-left-radius: 0.25em;
+}
+
+/*--------------
+     Toggle
+---------------*/
+
+/* Toggle (Modifies active state to give affordances) */
+
+.ui.toggle.buttons .active.button,
+.ui.buttons .button.toggle.active,
+:host(.toggle.active) { /* TODO: Needs JavaScript */
+  background-color: #5BBD72 !important;
+  color: #FFFFFF !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+:host(.toggle.active):hover {
+  background-color: #58CB73 !important;
+  color: #FFFFFF !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+/*--------------
+    Circular
+---------------*/
+
+:host(.circular) {
+  border-radius: 10em;
+}
+
+/*-------------------
+      Or Buttons
+--------------------*/
+
+:host .or {
+  position: relative;
+  float: left;
+  width: 0.3em;
+  height: 1.1em;
+  z-index: 3;
+}
+
+:host .or:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: 'or';
+  background-color: #FFFFFF;
+  margin-top: -0.1em;
+  margin-left: -0.9em;
+  width: 1.8em;
+  height: 1.8em;
+  line-height: 1.55;
+  color: #AAAAAA;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  border-radius: 500px;
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:host .or:after {
+  position: absolute;
+  top: 0em;
+  left: 0em;
+  content: ' ';
+  width: 0.3em;
+  height: 1.7em;
+  background-color: transparent;
+  border-top: 0.5em solid #FFFFFF;
+  border-bottom: 0.5em solid #FFFFFF;
+}
+
+/* Fluid Or */
+
+:host(.fluid) .or {
+  width: 0em !important;
+}
+
+:host(.fluid) .or:after {
+  display: none;
+}
+
+/*-------------------
+       Attached
+--------------------*/
+
+/* Plural Attached */  /* Are these used in the docs? */
+
+/*:host(.attached) {
+  margin: 0px;
+  border-radius: 4px 4px 0px 0px;
+}
+
+:host(.attached) ui-button:first-child {
+  border-radius: 4px 0px 0px 0px;
+}
+
+:host(.attached) ui-button:last-child {
+  border-radius: 0px 4px 0px 0px;
+}*/
+
+/* Bottom Side */
+
+/*:host(.bottom.attached) {
+  margin-top: -1px;
+  border-radius: 0px 0px 4px 4px;
+}
+
+:host(.bottom.attached) ui-button:first-child {
+  border-radius: 0px 0px 0px 4px;
+}
+
+:host(.bottom.attached) ui-button:last-child {
+  border-radius: 0px 0px 4px 0px;
+}*/
+
+/* Left Side */
+
+/*:host(.left.attached) {
+  margin-left: -1px;
+  border-radius: 0px 4px 4px 0px;
+}
+
+:host(.left.attached) ui-button:first-child {
+  margin-left: -1px;
+  border-radius: 0px 4px 0px 0px;
+}
+
+:host(.left.attached) ui-button:last-child {
+  margin-left: -1px;
+  border-radius: 0px 0px 4px 0px;
+}*/
+
+/* Right Side */
+
+/*:host(.right.attached) {
+  margin-right: -1px;
+  border-radius: 4px 0px 0px 4px;
+}
+
+:host(.right.attached) ui-button:first-child {
+  margin-left: -1px;
+  border-radius: 4px 0px 0px 0px;
+}
+
+:host(.right.attached) ui-button:last-child {
+  margin-left: -1px;
+  border-radius: 0px 0px 0px 4px;
+}*/
+
+/* Fluid */
+
+:host(.fluid),
+:host(.fluid) > ui-button {
+  display: block;
+  width: 100%;
+}
+
+:host(.\32) > ui-button,
+:host(.two) > ui-button {
+  width: 50%;
+}
+
+:host(.\33) > ui-button,
+:host(.three) > ui-button {
+  width: 33.333%;
+}
+
+:host(.\34) > ui-button,
+:host(.four) > ui-button {
+  width: 25%;
+}
+
+:host(.\35) > ui-button,
+:host(.five) > ui-button {
+  width: 20%;
+}
+
+:host(.\36) > ui-button,
+:host(.six) > ui-button {
+  width: 16.666%;
+}
+
+:host(.\37) > ui-button,
+:host(.seven) > ui-button {
+  width: 14.285%;
+}
+
+:host(.\38) > ui-button,
+:host(.eight) > ui-button {
+  width: 12.500%;
+}
+
+:host(.\39) > ui-button,
+:host(.nine) > ui-button {
+  width: 11.11%;
+}
+
+:host(.\31\30) > ui-button,
+:host(.ten) > ui-button {
+  width: 10%;
+}
+
+:host(.\31\31) > ui-button,
+:host(.eleven) > ui-button {
+  width: 9.09%;
+}
+
+:host(.\31\32) > ui-button,
+:host(.twelve) > ui-button {
+  width: 8.3333%;
+}
+
+/* Fluid Vertical Buttons */
+
+:host(.fluid.vertical),
+:host(.fluid.vertical) > ui-button {
+  display: block;
+  width: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:host(.\32.vertical) ui-button,
+:host(.two.vertical) ui-button {
+  height: 50%;
+}
+
+:host(.\33.vertical) ui-button,
+:host(.three.vertical) ui-button {
+  height: 33.333%;
+}
+
+:host(.\34.vertical) ui-button,
+:host(.four.vertical) ui-button {
+  height: 25%;
+}
+
+:host(.\35.vertical) ui-button,
+:host(.five.vertical) ui-button {
+  height: 20%;
+}
+
+:host(.\36.vertical) ui-button,
+:host(.six.vertical) ui-button {
+  height: 16.666%;
+}
+
+:host(.\37.vertical) ui-button,
+:host(.seven.vertical) ui-button {
+  height: 14.285%;
+}
+
+:host(.\38.vertical) ui-button,
+:host(.eight.vertical) ui-button {
+  height: 12.500%;
+}
+
+:host(.\39.vertical) ui-button,
+:host(.nine.vertical) ui-button {
+  height: 11.11%;
+}
+
+:host(.\31\30.vertical) ui-button,
+:host(.ten.vertical) ui-button {
+  height: 10%;
+}
+
+:host(.\31\31.vertical) ui-button,
+:host(.eleven.vertical) ui-button {
+  height: 9.09%;
+}
+
+:host(.\31\32.vertical) ui-button,
+:host(.twelve.vertical) ui-button {
+  height: 8.3333%;
+}
+
+/*-------------------
+       Colors
+--------------------*/
+
+/*--- Black ---*/
+
+:host(.black) ui-button {
+  background-color: #5C6166;
+  color: #FFFFFF;
+}
+
+:host(.black) ui-button:hover {
+  background-color: #4C4C4C;
+  color: #FFFFFF;
+}
+
+:host(.black) ui-button:active {
+  background-color: #333333;
+  color: #FFFFFF;
+}
+
+/*--- Green ---*/
+
+:host(.green) ui-button {
+  background-color: #5BBD72;
+  color: #FFFFFF;
+}
+
+:host(.green) ui-button:hover,
+:host(.green) ui-button.active {
+  background-color: #58cb73;
+  color: #FFFFFF;
+}
+
+:host(.green) ui-button:active {
+  background-color: #4CB164;
+  color: #FFFFFF;
+}
+
+/*--- Red ---*/
+
+:host(.red) ui-button {
+  background-color: #D95C5C;
+  color: #FFFFFF;
+}
+
+:host(.red) ui-button:hover,
+:host(.red) ui-button.active {
+  background-color: #E75859;
+  color: #FFFFFF;
+}
+
+:host(.red) ui-button:active {
+  background-color: #D24B4C;
+  color: #FFFFFF;
+}
+
+/*--- Orange ---*/
+
+:host(.orange) ui-button {
+  background-color: #E96633;
+  color: #FFFFFF;
+}
+
+:host(.orange) ui-button:hover,
+:host(.orange) ui-button.active {
+  background-color: #FF7038;
+  color: #FFFFFF;
+}
+
+:host(.orange) ui-button:active {
+  background-color: #DA683B;
+  color: #FFFFFF;
+}
+
+/*--- Blue ---*/
+
+:host(.blue) ui-button {
+  background-color: #6ECFF5;
+  color: #FFFFFF;
+}
+
+:host(.blue) ui-button:hover,
+:host(.blue) ui-button.active {
+  background-color: #1AB8F3;
+  color: #FFFFFF;
+}
+
+:host(.blue) ui-button:active {
+  background-color: #0AA5DF;
+  color: #FFFFFF;
+}
+
+/*--- Purple ---*/
+
+:host(.purple) ui-button {
+  background-color: #564F8A;
+  color: #FFFFFF;
+}
+
+:host(.purple) ui-button:hover,
+:host(.purple) ui-button.active {
+  background-color: #3E3773;
+  color: #FFFFFF;
+}
+
+:host(.purple) ui-button:active {
+  background-color: #2E2860;
+  color: #FFFFFF;
+}
+
+/*--- Teal ---*/
+
+:host(.teal) ui-button {
+  background-color: #00B5AD;
+  color: #FFFFFF;
+}
+
+:host(.teal) ui-button:hover,
+:host(.teal) ui-button.active {
+  background-color: #009A93;
+  color: #FFFFFF;
+}
+
+:host(.teal) ui-button:active {
+  background-color: #00847E;
+  color: #FFFFFF;
+}
+
+/*---------------
+    Positive
+----------------*/
+
+:host(.positive) ui-button {
+  background-color: #5BBD72 !important;
+  color: #FFFFFF;
+}
+
+.ui.positive.buttons .button:hover,
+:host(.positive):hover,
+.ui.positive.buttons .active.button,
+:host(.positive.active) {
+  background-color: #58CB73 !important;
+  color: #FFFFFF;
+}
+
+.ui.positive.buttons .button:active,
+:host(.positive):active {
+  background-color: #4CB164 !important;
+  color: #FFFFFF;
+}
+
+/*---------------
+     Negative
+----------------*/
+
+.ui.negative.buttons .button,
+:host(.negative) {
+  background-color: #D95C5C !important;
+  color: #FFFFFF;
+}
+
+.ui.negative.buttons .button:hover,
+:host(.negative):hover,
+.ui.negative.buttons .active.button,
+:host(.negative.active) {
+  background-color: #E75859 !important;
+  color: #FFFFFF;
+}
+
+.ui.negative.buttons .button:active,
+:host(.negative):active {
+  background-color: #D24B4C !important;
+  color: #FFFFFF;
+}
+
+/*******************************
+            Groups
+*******************************/
+
+:host {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+:host:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+:host ui-button:first-child {
+  border-left: none;
+  margin-left: 0em;
+  border-top-left-radius: 0.25em;
+  border-bottom-left-radius: 0.25em;
+}
+
+:host ui-button {
+  float: left;
+  border-radius: 0em;
+}
+
+:host ui-button:last-child {
+  border-top-right-radius: 0.25em;
+  border-bottom-right-radius: 0.25em;
+}
+
+/* Vertical  Style */
+
+:host(.vertical) {
+  display: inline-block;
+}
+
+:host(.vertical) ui-button {
+  display: block;
+  float: none;
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1) inset;
+}
+
+:host(.vertical) ui-button:first-child,
+:host(.vertical) ui-button.mini:first-child,
+:host(.vertical) ui-button.tiny:first-child,
+:host(.vertical) ui-button.small:first-child,
+:host(.vertical) ui-button.massive:first-child,
+:host(.vertical) ui-button.huge:first-child {
+  margin-top: 0px;
+  border-radius: 0.25em 0.25em 0px 0px;
+}
+
+:host(.vertical) ui-button:last-child,
+:host(.vertical) ui-button.mini:last-child,
+:host(.vertical) ui-button.tiny:last-child,
+:host(.vertical) ui-button.small:last-child,
+:host(.vertical) ui-button.massive:last-child,
+:host(.vertical) ui-button.huge:last-child {
+  border-radius: 0px 0px 0.25em 0.25em;
+}
